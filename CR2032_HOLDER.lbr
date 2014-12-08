@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -60,8 +60,8 @@
 <package name="CR2032_HOLDER">
 <rectangle x1="-17" y1="-3.5" x2="-10.5" y2="3" layer="1"/>
 <rectangle x1="10.5" y1="-3.5" x2="17" y2="3" layer="1" rot="R90"/>
-<smd name="P$1" x="-13.97" y="0" dx="1.27" dy="0.635" layer="1" roundness="100"/>
-<smd name="P$2" x="13.97" y="0" dx="1.27" dy="0.635" layer="1" roundness="100"/>
+<smd name="POSITIVE_PAD_1" x="-13.97" y="0" dx="1.27" dy="0.635" layer="1" roundness="100"/>
+<smd name="POSITIVE_PAD_2" x="13.97" y="0" dx="1.27" dy="0.635" layer="1" roundness="100"/>
 <wire x1="-10" y1="5" x2="-10" y2="-10" width="0.127" layer="21"/>
 <wire x1="10" y1="-10" x2="10" y2="5" width="0.127" layer="21"/>
 <wire x1="10" y1="5" x2="5" y2="10" width="0.127" layer="21"/>
@@ -91,7 +91,7 @@
 <device name="NORMAL" package="CR2032_HOLDER">
 <connects>
 <connect gate="G$1" pin="0V" pad="NEGATIVE_PAD"/>
-<connect gate="G$1" pin="3V" pad="P$1 P$2" route="any"/>
+<connect gate="G$1" pin="3V" pad="POSITIVE_PAD_1 POSITIVE_PAD_2" route="any"/>
 </connects>
 <technologies>
 <technology name=""/>
